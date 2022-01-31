@@ -1,8 +1,10 @@
 import React from 'react';
 import {Navbar, NavbarBrand, NavbarToggler, Collapse, 
-Nav, NavItem, NavLink} from 'reactstrap';
+Nav, NavItem} from 'reactstrap';
 import Logo from '../images/logo.svg';
 import ProfilePic from '../images/image-avatar.png';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -24,35 +26,35 @@ function Navigation() {
                     navbar
                 >
                     <NavItem className='mx-4'>
-                        <NavLink href="/" className='mylinks'>
-                            Collections
-                        </NavLink>
+                       
+                            <Link to="/collections" className='mylinks' >Collections</Link>
+                        
                     </NavItem>
                     <NavItem className='mx-4'>
-                        <NavLink href="/" className='mylinks'>
-                            Men
-                        </NavLink>
+                        
+                            <Link to="/men" className='mylinks'>Men</Link>
+                        
                     </NavItem>
                     <NavItem className='mx-4'>
-                        <NavLink href="/" className='mylinks'>
-                            Women
-                        </NavLink>
+                        
+                            <Link to="/women" className='mylinks'>Women</Link>
+                       
                     </NavItem>
                     <NavItem className='mx-4'>
-                        <NavLink href="/" className='mylinks'>
-                            About
-                        </NavLink>
+                        
+                            <Link to="/about" className='mylinks'>About</Link>
+                        
                     </NavItem>
                     <NavItem className='mx-4'>
-                        <NavLink href="/" className='mylinks'>
-                            Contact
-                        </NavLink>
+                        
+                            <Link to="/contact" className='mylinks'>Contact</Link>
+                       
                     </NavItem>
                 </Nav>
                 <Nav className="me-auto">
                     <NavItem>
                         <img src={require('../images/icon-cart.svg').default} 
-                        className='img-fluid mt-2' alt="cart icon" />    
+                        className='img-fluid mt-2 myCart' alt="cart icon" />    
                     </NavItem>
                     <NavItem>
                         <img src={ProfilePic} className='myimg img-fluid' alt="profile pic" />    
