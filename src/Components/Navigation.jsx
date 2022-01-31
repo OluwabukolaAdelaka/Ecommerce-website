@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
 function Navigation() {
     return ( 
         <div className='container container-fluid'>
-            <Navbar className='mynavbar'
+            <Navbar className='mynavbar sticky'
                 color="light"
                 expand="md"
                 light

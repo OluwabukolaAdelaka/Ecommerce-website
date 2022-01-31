@@ -10,7 +10,7 @@ function Collections () {
         <React.Fragment>
             <div className="container">
                 <div className="row myrow">
-                    <div className="col">
+                    <div className="col-sm-12 col-lg-6">
                         <img src={Product} className="img-fluid mainProduct" alt="product" />
                         <div className="thumbnail-part">
                             <img src={productThumb1} className="img-fluid thumbnail" alt="pic" />
@@ -19,7 +19,7 @@ function Collections () {
                             <img src={productThumb4} className="img-fluid thumbnail" alt="" />
                         </div>
                     </div>
-                    <div className="col text-part">
+                    <div className="col-sm-12 col-lg-6 text-part">
                         <h5 className='text-part-title'>SNEAKER COMPANY</h5>
                         <h1 className='text-part-hero'>Fall Limited Edition Sneakers</h1>
                         <p className='text-part-msg'>These low-profile sneakers are your perfect casual wear companion.
@@ -28,6 +28,13 @@ function Collections () {
                         </p>
                         <h1 className='discount-price'>$125.00 <small className='price-percent'>50%</small></h1>
                         <p className='orig-price'>$250.00</p>
+                        <div className='addToCart'>
+                           <button className="buttons">-</button>
+                           <h3 className='totalNo'>0</h3>
+                           <button className=" buttons">+</button>
+                           <button className="myCartButton"><img src={require('../images/icon-cart-copy.svg').default} 
+                        className='img-fluid me-2' alt="cart icon" />Add to cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
