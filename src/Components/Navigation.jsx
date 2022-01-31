@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar, NavbarBrand, NavbarToggler, Collapse, 
-Nav, NavItem} from 'reactstrap';
+Nav, NavItem, Badge} from 'reactstrap';
 import Logo from '../images/logo.svg';
 import ProfilePic from '../images/image-avatar.png';
 import {Link} from 'react-router-dom';
@@ -54,7 +54,8 @@ function Navigation() {
                 <Nav className="me-auto">
                     <NavItem>
                         <img src={require('../images/icon-cart.svg').default} 
-                        className='img-fluid mt-2 myCart' alt="cart icon" />    
+                        className='img-fluid mt-2 myCart' alt="cart icon" />
+                          <Badge color="primary">0</Badge>
                     </NavItem>
                     <NavItem>
                         <img src={ProfilePic} className='myimg img-fluid' alt="profile pic" />    
