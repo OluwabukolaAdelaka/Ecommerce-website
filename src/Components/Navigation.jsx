@@ -4,11 +4,41 @@ Nav, NavItem, Badge} from 'reactstrap';
 import Logo from '../images/logo.svg';
 import ProfilePic from '../images/image-avatar.png';
 import {Link} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import ProductCart from '../images/image-product-1-copy.jpg';
 
 
 
 
 function Navigation({cart}) {
+    const viewCart = () => {
+        cart === 0 ?  toast.warn("Your cart is empty, please select item(s)") : 
+        toast(
+        <div>
+            <h3>Cart</h3>
+            <div className='cartProductDisplay'>
+                <img src={ProductCart} className="img-fluid cartProduct" alt="product" />
+                <div className='productInfo'>
+                    <p>Fall Limited Edition Sneakers</p>
+                    <p className='orig-price-cart'>$125.00 x {cart} <small className='discount-price-cart'>${cart * 125}</small></p>
+                </div>
+            </div>
+            <button onClick={processingOrder} className="addToCartButtonCart">Checkout</button>
+        </div>
+        );
+    }
+
+    const processingOrder = () => {
+        const resolveAfter2Sec = new Promise(resolve => setTimeout(resolve, 2000));
+        toast.promise(
+                resolveAfter2Sec,
+                    {
+                    pending: 'Processing your order',
+                    success: 'Your order is processed 👌'
+                    }
+        )
+    }
+
     return ( 
         <div className='container container-fluid'>
             <Navbar className='mynavbar sticky'
@@ -27,7 +57,7 @@ function Navigation({cart}) {
                 >
                     <NavItem className='mx-4'>
                        
-                            <Link to="/collections" className='mylinks' >Collections</Link>
+                            <Link to="/" className='mylinks' >Collections</Link>
                         
                     </NavItem>
                     <NavItem className='mx-4'>
@@ -53,9 +83,12 @@ function Navigation({cart}) {
                 </Nav>
                 <Nav className="me-auto">
                     <NavItem>
-                        <img src={require('../images/icon-cart.svg').default} 
+                        <button onClick={viewCart} className='badgeBtn'>
+                            <img src={require('../images/icon-cart.svg').default} 
                             className='img-fluid mt-2 myCart' alt="cart icon" />
-                          <Badge pill color="" className="mybadge">{cart}</Badge>
+                          <Badge pill color=""
+                          className="mybadge">{cart}</Badge>
+                        </button>
                     </NavItem>
                     <NavItem>
                         <img src={ProfilePic} className='myimg img-fluid' alt="profile pic" />    
@@ -63,6 +96,7 @@ function Navigation({cart}) {
                 </Nav>
                 </Collapse>
             </Navbar>
+            <ToastContainer />
         </div>
      );
 }

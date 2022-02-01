@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Navigation from './Components/Navigation';
+import 'react-toastify/dist/ReactToastify.css';
 import {Routes, Route} from 'react-router-dom';
+import Navigation from './Components/Navigation';
 import Collections from './Components/Collections';
 import Women from './Components/Women';
 import Men from './Components/Men';
@@ -29,7 +30,7 @@ function App() {
         <div className='app'>
           <Navigation cart={cart} />
           <Routes>
-            <Route path="/collections" element={<Collections 
+            <Route path="/" element={<Collections 
             onIncrement={handleIncrement} 
             onDecrement={handleDecrement} count={count} onAdd={addToCart} />} />
             <Route path="/men" element={<Men />} />

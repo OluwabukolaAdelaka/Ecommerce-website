@@ -2,7 +2,9 @@ import React from 'react';
 
 function Men () {
     return ( 
-        <h1>Men Pages</h1>
+        <div className="container">
+            <h1>Men's Page</h1>
+        </div>
      );
 }
  

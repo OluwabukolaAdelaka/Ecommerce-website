@@ -34,7 +34,7 @@ function Collections({count, onIncrement, onDecrement, onAdd}) {
                             disabled={count <= 0} className="buttons">-</button>
                            <h3 className='totalNo'>{count}</h3>
                            <button onClick={onIncrement} className=" buttons">+</button>
-                           <button onClick={onAdd} className="myCartButton"><img src={require('../images/icon-cart-copy.svg').default} 
+                           <button onClick={onAdd} className="addToCartButton"><img src={require('../images/icon-cart-copy.svg').default} 
                         className='img-fluid me-2' alt="cart icon" />Add to cart</button>
                         </div>
                     </div>
