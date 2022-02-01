@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Product from '../images/image-product-1.jpg';
 import productThumb1 from '../images/image-product-1-thumbnail.jpg';
 import productThumb2 from '../images/image-product-2-thumbnail.jpg';
@@ -6,8 +6,8 @@ import productThumb3 from '../images/image-product-3-thumbnail.jpg';
 import productThumb4 from '../images/image-product-4-thumbnail.jpg';
 
 
-function Collections() {
-    const [count, setCount] = useState(0)
+function Collections({count, onIncrement, onDecrement, onAdd}) {
+    
         return (
             <div className="container">
                 <div className="row myrow">
@@ -30,11 +30,11 @@ function Collections() {
                         <h1 className='discount-price'>$125.00 <small className='price-percent'>50%</small></h1>
                         <p className='orig-price'>$250.00</p>
                         <div className='addToCart'>
-                           <button onClick={() => setCount(count - 1)} 
-                           disabled={count <= 0} className="buttons">-</button>
+                           <button  onClick={onDecrement}
+                            disabled={count <= 0} className="buttons">-</button>
                            <h3 className='totalNo'>{count}</h3>
-                           <button onClick={() => setCount(count + 1)} className=" buttons">+</button>
-                           <button className="myCartButton"><img src={require('../images/icon-cart-copy.svg').default} 
+                           <button onClick={onIncrement} className=" buttons">+</button>
+                           <button onClick={onAdd} className="myCartButton"><img src={require('../images/icon-cart-copy.svg').default} 
                         className='img-fluid me-2' alt="cart icon" />Add to cart</button>
                         </div>
                     </div>

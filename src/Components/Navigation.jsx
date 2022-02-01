@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 
 
 
-function Navigation() {
+function Navigation({cart}) {
     return ( 
         <div className='container container-fluid'>
             <Navbar className='mynavbar sticky'
@@ -55,7 +55,7 @@ function Navigation() {
                     <NavItem>
                         <img src={require('../images/icon-cart.svg').default} 
                         className='img-fluid mt-2 myCart' alt="cart icon" />
-                          <Badge color="primary">0</Badge>
+                          <Badge pill color="" className="mybadge">{cart}</Badge>
                     </NavItem>
                     <NavItem>
                         <img src={ProfilePic} className='myimg img-fluid' alt="profile pic" />    

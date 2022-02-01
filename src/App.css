@@ -116,6 +116,12 @@
   font-weight: bold;
   font-size: 2rem;
 }
+
+.buttons:hover {
+  color: #f1730cca;
+  background-color: #fff;
+  cursor: pointer;
+}
 .totalNo {
   margin-right: 20px;
   font-weight: bold;
@@ -129,4 +135,19 @@
   outline: none;
   border: #f1730c;
   border-radius: 10px;
+}
+.myCartButton:hover {
+  background-color: #f1730cca;
+  color: #ffffff;
+  border: #f1730cca;
+  cursor: pointer;
+}
+
+.mybadge {
+  background-color: #f1730c !important;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: none !important;
 }
