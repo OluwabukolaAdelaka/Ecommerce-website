@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
 import {Routes, Route} from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Collections from './Components/Collections';

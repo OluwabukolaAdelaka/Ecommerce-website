@@ -67,6 +67,11 @@
   height: auto;
   border-radius: 20px;
   margin-right: 5px;
+  opacity: 70%;
+}
+
+.thumbnail:hover {
+  opacity: 100%;
 }
 
 .text-part {
