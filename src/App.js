@@ -21,7 +21,8 @@ function App() {
   }
   
   const addToCart = () => {
-    setCart(count)
+    setCart(count);
+    setCount(0);
   }
 
       return (

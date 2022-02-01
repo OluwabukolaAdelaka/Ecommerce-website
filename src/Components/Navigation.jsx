@@ -54,7 +54,7 @@ function Navigation({cart}) {
                 <Nav className="me-auto">
                     <NavItem>
                         <img src={require('../images/icon-cart.svg').default} 
-                        className='img-fluid mt-2 myCart' alt="cart icon" />
+                            className='img-fluid mt-2 myCart' alt="cart icon" />
                           <Badge pill color="" className="mybadge">{cart}</Badge>
                     </NavItem>
                     <NavItem>
