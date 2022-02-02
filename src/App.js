@@ -32,6 +32,7 @@ function App() {
       return (
         <div className='app'>
           <Navigation cart={cart} />
+
           <Routes>
             <Route path="/" element={<Collections 
             onIncrement={handleIncrement} 

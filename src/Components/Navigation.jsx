@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Navbar, NavbarBrand, NavbarToggler, Collapse, 
 Nav, NavItem, Badge} from 'reactstrap';
 import Logo from '../images/logo.svg';
@@ -11,6 +11,10 @@ import ProductCart from '../images/image-product-1-copy.jpg';
 
 
 function Navigation({cart}) {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
+
+
     const viewCart = () => {
         cart === 0 ?  toast.warn("Your cart is empty, please select item(s)") : 
         toast(
@@ -49,8 +53,8 @@ function Navigation({cart}) {
                 <NavbarBrand to="/">
                 <img src={Logo} alt="logo of website" />
                 </NavbarBrand>
-                <NavbarToggler onClick={function noRefCheck(){}} />
-                <Collapse navbar >
+                <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={isOpen} navbar >
                 <Nav
                     className="me-auto"
                     navbar
