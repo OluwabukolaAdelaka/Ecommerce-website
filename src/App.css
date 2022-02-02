@@ -77,7 +77,7 @@
 .text-part {
   justify-content: center;
   margin: 7rem 0 0 0 !important;
-  padding: 7rem 0 0 3rem !important;
+  padding: 7rem 0 0 2rem !important;
   word-wrap: break-word;
 }
 
@@ -150,13 +150,14 @@
 .totalNo {
   margin-right: 20px;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .addToCartButton {
   background-color: #f1730c;
   color: #ffffff;
-  padding: 0.5rem 3rem;
+  padding: 0.3rem 2rem;
   outline: none;
   border: #f1730c;
   border-radius: 10px;
